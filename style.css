@@ -1,0 +1,135 @@
+@import "compass/css3";
+
+// hay frand, play with these vars.
+$loader-style: double; 
+$loader-width: 0.5em;
+$loader-color: #ecf0f1;
+$loader-size: 150px;
+$loader-speed: 1s;
+
+$body-bg: #e74c3c;
+
+// colors by http://flatuicolors.com/
+
+body {
+  background-color: $body-bg;
+}
+.loader {
+  width: 1em;
+  height: 1em;
+  font-size: $loader-size;
+  position: relative;
+  @media (max-width: $loader-size * 1.5), (max-height: $loader-size * 1.5) {
+    font-size: $loader-size/2;
+  }
+  &:before, &:after {
+    content: "";
+    top: 0;
+    display: block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    border-width: $loader-width;
+    border-style: $loader-style;
+    border-color: transparent;
+    box-sizing: border-box;
+    border-radius: 1em;
+    animation: spin $loader-speed infinite;
+  }
+  &:after {
+    left: 0;
+    border-left-color: $loader-color;
+  }
+  &:before {
+    right: 0;
+    border-right-color: $loader-color;
+    animation-delay: $loader-speed/-4;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+header p{
+text-decoration: none;
+position: absolute;
+top: -60px;
+width: 55px;
+height: 132px;
+flex-shrink: 0;
+color: #7000FE;
+font-family: Inter;
+font-size: 64px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+
+
+}
+.one {
+	text-decoration: none;
+	position: absolute;
+	right: 150px;
+}
+.two{
+	text-decoration: none;
+	position: absolute;
+	right: 80px;
+}
+.prom_oneId1{
+
+}
+.imgidone{
+	position: absolute;
+	top: 100px;
+	right: 900px;
+width: 233px;
+height: 293px;
+flex-shrink: 0;
+transition: 0.4s ;
+}
+.imgidone:hover{
+	scale:1.1;
+	box-shadow: 1px 0px 100px 1px purple;
+	transition: 0.4s ;
+}
+.textpidone{
+	position:absolute;
+	top:270px;
+	width: 100px;
+	color: white;
+	left:220px;
+	transition: 0.4s linear;
+
+}
+.textpidone:hover{
+	transform: translate(0px, -10px);
+	border-top-left-radius: 1000px;
+	transition: 0.4s ;
+}
+.textpidtwo{
+	position:absolute;
+	top:370px;
+	width: 250px;
+	left:150px;
+
+}
+.abtnidone{
+	position:absolute;
+	top:470px;
+	width: 100px;
+	height: 40px;
+	text-align: center;
+	left:150px;
+	text-decoration: none;
+	background-color: purple;
+	color: white;
+	transition: 0.4s ;
+}
+.abtnidone:hover{
+	background-image: repeating-linear-gradient(45deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(41, 27, 158),rgb(249, 77, 212));
+	transition: 0.4s ;
+}
